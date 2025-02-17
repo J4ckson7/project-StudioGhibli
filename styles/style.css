@@ -11,3 +11,45 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+body{
+    background-image: url('../Images/wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+}
+
+header{
+    padding: 48px 20px;
+}
+
+.headerContainer{
+    max-width: 1216px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer{
+    max-width: 166px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.iconsContainer ul{
+    display: flex;
+    gap: 24px;
+}
+
+.iconsContainer ul li{
+    list-style: none;
+
+}
+
+.iconLink{
+    text-decoration: none;
+}
