@@ -4,6 +4,10 @@
     --color-primary: #F1A5B1;
     --color-white: #FFFFFF;
     --color-black: #0B0A0A;
+
+    --text-fontSize: clamp(1rem, 0.8298rem + 0.8511vw, 1.5rem);
+    --title-fontSize: clamp(2.5rem, 1.9894rem + 2.5532vw, 4rem);
+    --author-fontSize: clamp(1rem, 0.9149rem + 0.4255vw, 1.25rem);
 }
 
 *{
@@ -13,11 +17,11 @@
 }
 
 body{
-    background-image: url('../Images/wallpaper.png');
+    background-image: url('../Images/background.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-size: auto;
-    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-color: black;
 }
 
 header{
@@ -90,14 +94,15 @@ main{
 
 .author{
     font-family: "Open Sans", serif;
-    font-size: 20px;
+    font-size: var(--author-fontSize);
     font-weight: 700;
+    line-height: 136%;
     color: var(--color-white);
 }
 
 .title{
     font-family: "Andada Pro", serif;
-    font-size: 64px;
+    font-size: var(--title-fontSize);
     font-weight: 800;
     color: var(--color-white);
     line-height: 110%;
@@ -105,7 +110,7 @@ main{
 
 .content{
     font-family: "Archivo", serif;
-    font-size: 24px;
+    font-size: var(--text-fontSize);
     font-weight: 500;
     line-height: 150%;
     color: var(--color-white);
@@ -124,6 +129,8 @@ main{
     align-items: center;
     border: none;
     border-radius: 4px;
+    width: 100%;
+    justify-content: center;
 }
 
 .playText{
@@ -140,6 +147,7 @@ main{
     background-color: transparent;
     border: 2px solid var(--color-primary);
     border-radius: 4px;
+    width: 100%;
 }
 
 .trailerText{
@@ -152,13 +160,14 @@ main{
 }
 
 .ilustracaoContainer{
-    max-width: 574px;
-}
+    max-width: 646px;
+    max-height: 615px;
+} 
 
 .ilustracao{
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+} 
 
 @media (max-width: 930px) {
     .logoContainer{
@@ -167,10 +176,34 @@ main{
 }
 
 @media (max-width: 800px) {
+    body{
+        height: 100%;
+        background-position: center;
+        background-color: black;
+    }
+
+    header{
+        padding: 32px;
+    }
+
     .iconsContainer ul li{
         min-width: 24px;
         max-width: min(40px, 13.8%);
     }
+
+    main{
+        flex-direction: column-reverse;
+        padding-bottom: 24px;
+    }
+
+    .mainButtons{
+        flex-direction: column;
+    }
+
+    .ilustracaoContainer{
+        max-width: 399px;
+        max-height: 433px;
+    } 
 }
 
 @media (max-width: 500px) {
